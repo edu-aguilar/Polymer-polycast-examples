@@ -9,6 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-drawer-panel/paper-drawer-panel.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view3">
@@ -21,12 +23,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
-    <div class="card">
-      <div class="circle">3</div>
-      <h1>View Three</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-    </div>
+    <paper-drawer-panel id="paperDrawerPanel" force-narrow right-drawer>
+      <div drawer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae quis, dolor cupiditate, eligendi nihil numquam esse totam nisi laudantium obcaecati fuga quam neque vero quo autem perferendis aperiam vel!</p>
+        <button tabindex="0">Options</button>
+        <button tabindex="0">Settings</button>
+        <button tabindex="0" paper-drawer-toggle>Close drawer</button>
+      </div>
+      <div main>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos fugit repudiandae maiores tempora. Veniam fugiat voluptates beatae laudantium esse molestias repellat tempore, sint dolor ullam autem assumenda odio, doloremque laborum.</p>
+        </div>
+        <div>
+          <paper-button paper-drawer-toggle raised>toggle drawer</paper-button>
+        </div>
+      </div>
+
+    </paper-drawer-panel>
+
   </template>
 
   <script>
