@@ -11,6 +11,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="_components/tag-name.html">
+<link rel="import" href="_components/ui-message.html">
+<link rel="import" href="_components/my-theme.html">
 
 <dom-module id="my-view4">
   <template>
@@ -22,9 +24,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
-    <h1>Ejercicio 16</h1>
-    <button on-tap="changeColor">test cambio color</button>
-    <name-tag first="Edu" last="Aguilar"></name-tag>
+    <div class="card">
+        <h1>Ejercicio 16</h1>
+        <button on-tap="changeColor">test cambio color</button>
+        <name-tag first="Edu" last="Aguilar"></name-tag>
+    </div>
+
+    <div class="card">
+        <h1>Ejercicio 17</h1>
+        <ui-message header="hola" message="vamos de cañas!"></ui-message>
+    </div>
 
   </template>
 
