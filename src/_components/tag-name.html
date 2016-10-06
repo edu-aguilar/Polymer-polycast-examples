@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="name-tag">
+    
+    <style>
+        :host(.colorful) {
+            color: red;
+        }
+    </style>
+
+    <template>
+        <h1>Ejercicio name-tag component</h1>
+
+        <div>
+            <span>{{first}}</span> <span>{{last}}</span>
+        </div>
+        <div>
+            <span>{{_computeFullName(first, last)}}</span>
+        </div>
+        
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'name-tag',
+        properties: {
+            first: String,
+            last: String
+        },
+        _computeFullName: function(first, last) {
+            return first + ' ' + last;
+        },
+        addColor: function() {
+            this.classList.toggle('colorful')
+        }
+    })
+</script>
