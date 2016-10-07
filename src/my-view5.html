@@ -1,0 +1,26 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="ej24/superhero-gallery.html">
+
+<dom-module id="my-view5">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Ejercicio 24</h1>
+      <superhero-gallery></superhero-gallery>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-view5'
+    });
+  </script>
+</dom-module>

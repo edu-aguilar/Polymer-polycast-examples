@@ -1,0 +1,54 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="superhero-gallery">
+  <template>
+      <style>
+          :host {
+              display: block;
+          }
+          .pic {
+              height: 300px;
+          }
+      </style>
+
+      <iron-pages id="heroPages" selected="{{selected}}" attr-for-selected="hero-name">
+          <section hero-name="batman">
+              <img class="pic" src="imgs/batman.jpeg" alt="">
+          </section>
+          <section hero-name="hulk">
+              <img class="pic" src="imgs/hulk.jpeg" alt="">
+          </section>
+          <section hero-name="ironman">
+              <img class="pic" src="imgs/ironman.jpeg" alt="">
+          </section>
+          <section hero-name="spiderman">
+              <img class="pic" src="imgs/spiderman.jpeg" alt="">
+          </section>
+      </iron-pages>
+      <div class="controller ">
+          <button on-tap="_prevPhoto">prev</button>
+          <input type="text" value="{{selected::input}}">
+          <button on-tap="_nextPhoto">next</button>
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'superhero-gallery',
+      properties: {
+          selected: {
+              type: String,
+              value: 'batman'
+          }
+      },
+      _prevPhoto: function() {
+          this.$.heroPages.selectPrevious();
+      },
+      _nextPhoto: function() {
+          this.$.heroPages.selectNext();
+      }
+    });
+  </script>
+</dom-module>
